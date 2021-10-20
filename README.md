@@ -4,7 +4,9 @@ Template to get started with the [Dagster Cloud CI GitHub Action](https://github
 
 ## Create a new repository from this template
 
-Click the `Use this Template` button and provide details for your new repo
+Click the `Use this Template` button and provide details for your new repo.
+
+![Creating a copy of the Template repo](https://user-images.githubusercontent.com/10215173/138138429-7a81e4d7-8fdf-4988-9758-2babcc90af5f.png)
 
 ## Modify GitHub Workflow
 
@@ -19,6 +21,8 @@ the format `https://{organization}.dagster.cloud/{deployment}`.
 
 Set up the secrets listed in the Docker registry access step, as well as the `DAGSTER_AGENT_TOKEN`,
 in your GitHub repository's Settings page.
+
+![GitHub settings page](https://user-images.githubusercontent.com/10215173/138138473-7f38f576-a66d-4a8b-b968-1989e22fab65.png)
 
 ## Modify `locations.yaml`
 
@@ -57,3 +61,5 @@ locations:
 
 At this point, the Workflow should complete successfully. If builds are failing, ensure that your
 secrets are properly set up the Workflow properly sets up Docker regsitry access.
+
+![Screen Shot 2021-10-20 at 10 02 55 AM](https://user-images.githubusercontent.com/10215173/138138556-d147000f-c42d-4ab1-8187-3d6be3786142.png)
