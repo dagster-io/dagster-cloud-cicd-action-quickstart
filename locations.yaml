@@ -1,0 +1,14 @@
+locations:
+  # Code location name
+  github_action_template_foo:
+    # Path to directory containing either requirements.txt file or Dockerfile,
+    # relative to the locations.yaml file
+    build: .
+
+    # The base Docker image to install your code in
+    # If providing a custom Dockerfile, this line is not needed
+    base_image: python:3.8-slim
+
+    # Fill in your Docker registry here, on Dockerhub, ECR, GCR, etc.
+    registry: 764506304434.dkr.ecr.us-west-2.amazonaws.com/github-action-template-foo
+    python_file: repo.py
