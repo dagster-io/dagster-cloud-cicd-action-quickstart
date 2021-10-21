@@ -1,4 +1,4 @@
-name: Dagster Cloud CI
+name: Dagster Cloud CI/CD
 on:
   push:
     branches:
@@ -49,8 +49,8 @@ jobs:
       #     username: _json_key
       #     password: ${{ secrets.GCR_JSON_KEY }}
 
-      - name: Run Dagster Cloud CI action
-        uses: dagster-io/dagster-cloud-ci-action@v0.1.0
+      - name: Run Dagster Cloud CI/CD action
+        uses: dagster-io/dagster-cloud-cicd-action@v0.1.0
         with:
           location-file: locations.yaml
           # Insert your Dagster Cloud Dagit URL here

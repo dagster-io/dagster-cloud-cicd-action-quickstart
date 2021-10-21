@@ -1,6 +1,6 @@
-# Dagster Cloud CI GitHub Action Quickstart
+# Dagster Cloud CI/CD GitHub Action Quickstart
 
-Template to get started with the [Dagster Cloud CI GitHub Action](https://github.com/dagster-io/dagster-cloud-ci-action).
+Template to get started with the [Dagster Cloud CI/CD GitHub Action](https://github.com/dagster-io/dagster-cloud-cicd-action).
 
 ## Create a new repository from this template
 
@@ -11,7 +11,7 @@ Click the `Use this Template` button and provide details for your new repo.
 ## Modify GitHub Workflow
 
 Edit the [GitHub Workflow](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#create-an-example-workflow) at
-[`/.github/workflows/dagster-cloud-ci.yml`](./.github/workflows/dagster-cloud-ci.yml) to set up Docker registry access. Uncomment the step associated with your
+[`/.github/workflows/dagster-cloud-cicd.yml`](./.github/workflows/dagster-cloud-cicd.yml) to set up Docker registry access. Uncomment the step associated with your
 registry (ECR, DockerHub, GCR etc.)
 
 Next, update the `dagit-url` to point to your Dagster Cloud deployment. This should have
