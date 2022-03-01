@@ -1,27 +1,16 @@
-from dagster import RunRequest, pipeline, repository, schedule, sensor, solid
+from dagster import job, op, repository
 
 
-@solid()
-def foo_solid(_):
+@op
+def foo_op(_):
     pass
 
 
-@solid()
-def foo_solid_2(_):
-    pass
-
-
-@pipeline
-def foo_pipeline():
-    foo_solid()
-    foo_solid_2()
-
-
-@pipeline
-def other_foo_pipeline():
-    foo_solid()
+@job
+def foo_job():
+    foo_op()
 
 
 @repository
 def foo_repo():
-    return [foo_pipeline, other_foo_pipeline]
+    return [foo_job]
