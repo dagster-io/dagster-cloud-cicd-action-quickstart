@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       # Set up Docker registry access
       # See https://github.com/docker/login-action for more examples
