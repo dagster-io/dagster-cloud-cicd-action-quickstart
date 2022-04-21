@@ -50,7 +50,7 @@ jobs:
       #     password: ${{ secrets.GCR_JSON_KEY }}
 
       - name: Run Dagster Cloud CI/CD action
-        uses: dagster-io/dagster-cloud-cicd-action/deploy@v0.2.2
+        uses: dagster-io/dagster-cloud-cicd-action/deploy@v0.2.4
         with:
           location-file: locations.yaml
           # Insert your Dagster Cloud Dagit URL here
