@@ -2,6 +2,8 @@
 
 Template to get started with the [Dagster Cloud CI/CD GitHub Action](https://github.com/dagster-io/dagster-cloud-cicd-action).
 
+For complete documentation on the CI/CD action, see [Continuous Integration in the Cloud docs](https://docs.dagster.cloud/guides/continuous-integration).
+
 ## Create a new repository from this template
 
 Click the `Use this Template` button and provide details for your new repo.
@@ -14,15 +16,14 @@ Edit the [GitHub Workflow](https://docs.github.com/en/actions/learn-github-actio
 [`/.github/workflows/dagster-cloud-cicd.yml`](./.github/workflows/dagster-cloud-cicd.yml) to set up Docker registry access. Uncomment the step associated with your
 registry (ECR, DockerHub, GCR etc.)
 
-Next, update the `dagit-url` to point to your Dagster Cloud deployment. This should have
-the format `https://{organization}.dagster.cloud/{deployment}`.
-
 ## Set up secrets
 
-Set up the secrets listed in the Docker registry access step, as well as the `DAGSTER_AGENT_TOKEN`,
+Set up the secrets listed in the Docker registry access step, as well as `DAGSTER_CLOUD_ORGANIZATION`, `DAGSTER_CLOUD_DEPLOYMENT`, and `DAGSTER_CLOUD_AGENT_TOKEN`,
 in your GitHub repository's Settings page.
 
-![GitHub settings page](https://user-images.githubusercontent.com/10215173/138138473-7f38f576-a66d-4a8b-b968-1989e22fab65.png)
+`DAGSTER_CLOUD_ORGANIZATION` and `DAGSTER_CLOUD_DEPLOYMENT` should specify the deployment to target, e.g. `hooli` and `prod`. `DAGSTER_CLOUD_AGENT_TOKEN` should contain an [agent token](https://docs.dagster.cloud/auth#managing-user-and-agent-tokens), e.g. `agent:hooli:1193cb69aaa34cfz83d44adcfe89b057`.
+
+![GitHub settings page](https://user-images.githubusercontent.com/10215173/164542909-78f7b580-96e4-44a2-990e-d85cb1ec9319.png)
 
 ## Modify `locations.yaml`
 
